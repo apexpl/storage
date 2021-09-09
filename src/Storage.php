@@ -42,8 +42,8 @@ class Storage
         $obj = new LocalFilesystemAdapter(
             $creds['dir'], 
             PortableVisibilityConverter::fromArray([
-                'file' => ['public' => 0640, 'private' => 0604], 
-                'dir' => ['public' => 0740, 'private' => 7604]
+                'file' => ['public' => 0755, 'private' => 0755], 
+                'dir' => ['public' => 0755, 'private' => 0755]
             ]),
             LOCK_EX,
             LocalFilesystemAdapter::DISALLOW_LINKS
